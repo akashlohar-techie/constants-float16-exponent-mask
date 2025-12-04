@@ -43,7 +43,7 @@ tape( 'the exported value can be used to mask off all bits except for the expone
 	x = 33.8;
 	w = toWord( x ); // 20538 => 0 10100 0000111010
 
-	actual = w & FLOAT16_EXPONENT_MASK; // 29952 => 0 10100 0000000000
+	actual = w & FLOAT16_EXPONENT_MASK; // 20480 => 0 10100 0000000000
 	expected = '0101000000000000';
 
 	t.strictEqual( toBinaryString( actual ), expected );
